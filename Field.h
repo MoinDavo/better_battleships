@@ -1,20 +1,20 @@
+#include "Ship.h"
 class Field
 {
 private:
-    int x_size, y_size;
+    bool bool_field[16][16]; // stores where the player has "shot"
+    char char_field[16][16]; // stores the chars the player sees
+    // TODO: change the ship to ship*. memory efficiency
+    Ship ship_field[16][16]; // stores the placed ships
+
+    bool check_field_empty(); //checks if the ship field is empty
     
 public:
     Field(/* args */);
     ~Field();
+    
+    void place_ship(Ship);
 };
-
-Field::Field(/* args */)
-{
-}
-
-Field::~Field()
-{
-}
 
 /*
 so I'll be needing 3 of these:
