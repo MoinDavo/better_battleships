@@ -13,7 +13,7 @@ private:
     bool bool_field[16][16];  // stores where the player has "shot"
     char char_field[16][16];  // stores the chars the player sees
 
-    bool check_field_empty(); // checks if the ship field is empty
+    bool check_ship_field_empty(); // checks if the ship_field is empty
 
 public:
     Field(/* args */);

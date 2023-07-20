@@ -1,13 +1,14 @@
 #include "Ship.h"
 
 Ship::Ship(int x, int y, int len, bool horizontal) : x_pos(x), y_pos(y), length(len), horizontal(horizontal) {}
+
 void Ship::check_if_destroyed()
 {
-    if (this->remaining == 0)
+    if (this->remaining <= 0)
         this->destroyed = true;
 }
 
-// --- getter / setter ---
+// --- getter (/ setter) ---
 Ship *Ship::get_ship() { return this; }
 int Ship::get_x() { return this->x_pos; }
 int Ship::get_y() { return this->y_pos; }
