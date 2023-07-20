@@ -1,14 +1,27 @@
 #include "Field.h"
 #include "Ship.h"
+Field::Field()
+{
+	// init fields
+	for (int i = 0; i < 16; i++)
+	{
+		for (int j = 0; j < 16; j++)
+		{
+			this->char_field[i][j] = '~';
+			this->bool_field[i][j] = false;
+			this->ship_field[i][j] = nullptr;
+		}
+	}
+}
 
-bool Field::check_field_empty()
+bool Field::check_ship_field_empty()
 {
 	// check in the ships in the field are destroyed or alive
 	for (int i = 0; i < 16; i++)
 	{
 		for (int j = 0; j < 16; j++)
 		{
-			if (!( this->ship_field[i][j]->get_destroyed() ))
+			if (!(this->ship_field[i][j]->get_destroyed()))
 			{
 				return false;
 			}
