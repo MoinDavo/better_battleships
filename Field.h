@@ -1,3 +1,4 @@
+#pragma once
 #include "Ship.h"
 /**
  * Class to store the game fields.

@@ -1,3 +1,4 @@
+#pragma once
 /**
  * Class to store the relevant data for a Battleship
  */
