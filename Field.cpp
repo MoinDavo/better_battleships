@@ -1,5 +1,7 @@
 #include "Field.h"
 #include "Ship.h"
+#include <stdio.h>
+
 Field::Field()
 {
 	// init fields
@@ -46,5 +48,17 @@ void Field::place_ship(Ship *s)
 		{
 			this->ship_field[s->get_x()][s->get_y() + i] = s;
 		}
+	}
+}
+
+void Field::print_field()
+{
+	for (int i = 0; i < 16; i++)
+	{
+		for (int j = 0; j < 16; j++)
+		{
+			printf("%c", this->char_field[i][j]);
+		}
+		printf("\n");
 	}
 }

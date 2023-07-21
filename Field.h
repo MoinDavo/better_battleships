@@ -17,7 +17,8 @@ private:
 
 public:
     Field(/* args */);
-    ~Field();
+    //~Field();
 
     void place_ship(Ship *);
+    void print_field();
 };
