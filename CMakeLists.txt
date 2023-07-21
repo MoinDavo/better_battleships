@@ -1,3 +1,3 @@
 cmake_minimum_required(VERSION 3.0)
 project(better_battleships)
-add_executable(game main.cpp)
+add_executable(game main.cpp Field.h Ship.h)
