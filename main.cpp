@@ -5,7 +5,7 @@ int main(int argc, char const *argv[])
 {
     Field test;
 
-    test.Field::print_field();
+    test.print_field();
 
     return 0;
 }
