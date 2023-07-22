@@ -8,8 +8,8 @@ private:
     int x_pos;       // x-position of the ship
     int y_pos;       // y-position of the ship
     int length;      // length of the ship
-    bool horizontal; // wether the ship is horizontal or vertical
-    int remaining;   // remaining parts of the ship that havn't been hit
+    bool horizontal; // whether the ship is horizontal or vertical
+    int remaining;   // remaining parts of the ship that haven't been hit
     int destroyed;   // wether the ship is destroyed or is still alive
 
     void check_if_destroyed();
