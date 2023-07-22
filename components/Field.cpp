@@ -1,6 +1,7 @@
 #include "Field.h"
 #include "Ship.h"
 #include <stdio.h>
+#include <string>
 
 Field::Field()
 {
@@ -60,5 +61,27 @@ void Field::print_field()
 			printf("%c", this->char_field[i][j]);
 		}
 		printf("\n");
+	}
+}
+
+bool Field::check_shot(int x, int y)
+{
+	if (this->bool_field[x][y])
+	{
+		return false;
+	}
+
+	this->bool_field[x][y] = true;
+	return true;
+}
+
+void Field::calc_shot(int x, int y)
+{
+	if (!(this->ship_field[x][y] == nullptr))
+	{
+		if (this->ship_field[x][y]->get_destroyed())
+		{
+			this->ship_field[x][y]->decrement_remaining();
+		}
 	}
 }
