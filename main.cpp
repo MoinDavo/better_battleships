@@ -1,5 +1,5 @@
-#include "Field.h"
-#include "Ship.h"
+#include "components/Field.h"
+#include "components/Ship.h"
 
 int main(int argc, char const *argv[])
 {
