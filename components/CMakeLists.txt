@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
+set(CMAKE_CXX_STANDARD 17)
 project(better_battleships)
 add_library(Field Field.cpp)
 add_library(Ship Ship.cpp)
